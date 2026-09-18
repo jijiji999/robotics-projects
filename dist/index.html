@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ji Zhou's robotics project media: humanoid reinforcement learning, sim-to-real deployment, and multi-robot fleet control.">
+  <meta name="theme-color" content="#0b1930">
+  <title>Ji Zhou | Robotics Projects</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Ji Zhou home">
+        <span class="brand-mark">JZ</span>
+        <span>Ji Zhou</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#humanoid">Humanoid Robot</a>
+        <a href="#fleet">Multi-Robot System</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cv" href="Ji_Zhou_CV.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Robotics Engineering · Chongqing University</p>
+        <h1>Humanoid robot learning,<br>deployment, and fleet control.</h1>
+        <p class="hero-lead">
+          I am a master's student working on reinforcement-learning-based humanoid locomotion,
+          sim-to-real deployment, imitation learning, and multi-robot coordination.
+          This page presents selected project videos, system diagrams, and implementation details.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#humanoid">View selected work</a>
+          <a class="button secondary" href="Ji_Zhou_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a class="text-link" href="https://github.com/jijiji999" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <aside class="hero-summary" aria-label="Project highlights">
+        <div class="summary-item">
+          <span class="summary-value">50 Hz</span>
+          <span class="summary-label">ONNX policy deployment</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-value">8 robots</span>
+          <span class="summary-label">Live Unitree G1 fleet</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-value">End-to-end</span>
+          <span class="summary-label">Training to real-robot control</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="project-nav section-shell" aria-label="Selected project navigation">
+      <a href="#humanoid">
+        <span class="project-number">01</span>
+        <span><strong>Full-Size Humanoid Robot</strong><small>RL training and sim-to-real deployment</small></span>
+      </a>
+      <a href="#fleet">
+        <span class="project-number">02</span>
+        <span><strong>Eight-Robot G1 Fleet</strong><small>Dance training and centralized control</small></span>
+      </a>
+    </section>
+
+    <section id="humanoid" class="project section-shell">
+      <header class="project-header">
+        <div>
+          <p class="eyebrow">Selected Project 01 · May 2026 – Sep 2026</p>
+          <h2>Full-Size Humanoid Robot</h2>
+          <p class="project-subtitle">Reinforcement learning, sim-to-real deployment, and real-robot integration</p>
+        </div>
+        <div class="role-card">
+          <span class="role-label">My role</span>
+          <p>Sole contributor to reinforcement-learning training and the complete software deployment stack. Mechanical design and assembly were completed by other team members.</p>
+        </div>
+      </header>
+
+      <div class="project-intro">
+        <figure class="portrait-figure">
+          <img src="assets/full-size-humanoid.jpg" alt="Full-size self-developed humanoid robot suspended in the laboratory" loading="lazy">
+        </figure>
+        <div class="project-details">
+          <p class="lead-copy">
+            I developed the complete pipeline from MJLab policy training to real-robot deployment,
+            including observation construction, ONNX inference, ROS2 runtime control, motor communication,
+            parallel-joint kinematics, diagnostics, and hardware debugging.
+          </p>
+          <ul class="key-points">
+            <li><strong>Training:</strong> PPO with an asymmetric Actor-Critic architecture, curriculum learning, and domain randomization.</li>
+            <li><strong>Runtime:</strong> C++ and ONNX Runtime policy inference at 50 Hz on an external computer.</li>
+            <li><strong>Communication:</strong> Ethernet, UDP, Cannelloni, SocketCAN, CAN FD, and DAMIAO actuators.</li>
+            <li><strong>Kinematics:</strong> Logical-to-physical mapping for parallel ankle mechanisms.</li>
+            <li><strong>Outcome:</strong> Completed real-robot integration and achieved stable walking.</li>
+          </ul>
+          <div class="repo-links" aria-label="Humanoid project repositories">
+            <a href="https://github.com/jijiji999/mjlabforjlj" target="_blank" rel="noopener">Training code ↗</a>
+            <a href="https://github.com/jijiji999/jijwholebodyctr" target="_blank" rel="noopener">Whole-body controller ↗</a>
+            <a href="https://github.com/jijiji999/lowbodycontrol" target="_blank" rel="noopener">Lower-body controller ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <h3>Training and real-robot results</h3>
+        <p>Representative simulation and deployment recordings.</p>
+      </div>
+      <div class="media-grid three">
+        <article class="media-card">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/wholebody-simulation.webm" type="video/webm">
+            Your browser does not support embedded video.
+          </video>
+          <div class="media-caption"><strong>Whole-body simulation</strong><span>Policy behavior in MJLab/MuJoCo.</span></div>
+        </article>
+        <article class="media-card">
+          <video controls preload="metadata" playsinline poster="assets/full-size-humanoid.jpg">
+            <source src="assets/wholebody-walk.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <div class="media-caption"><strong>Full-body walking</strong><span>Real-robot policy deployment and integration.</span></div>
+        </article>
+        <article class="media-card">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/lowbody-walk.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <div class="media-caption"><strong>Lower-body validation</strong><span>Early hardware and locomotion validation.</span></div>
+        </article>
+      </div>
+
+      <div class="section-heading split-heading">
+        <div><h3>System architecture</h3><p>Closed-loop flow from policy training to physical motor feedback.</p></div>
+        <a class="text-link" href="assets/humanoid-system-architecture.svg" target="_blank" rel="noopener">Open vector diagram ↗</a>
+      </div>
+      <a class="diagram-frame tall" href="assets/humanoid-system-architecture.svg" target="_blank" rel="noopener" aria-label="Open the humanoid closed-loop architecture diagram">
+        <img src="assets/humanoid-system-architecture.png" alt="Closed-loop architecture of the self-developed humanoid robot system" loading="lazy">
+      </a>
+      <div class="data-panel">
+        <div>
+          <p class="eyebrow">Deployment diagnostics</p>
+          <h3>Joint-level tracking and runtime data</h3>
+          <p>Recorded joint trajectories and control signals were used to compare expected and physical behavior during deployment and debugging.</p>
+        </div>
+        <a href="assets/humanoid-run-data.png" target="_blank" rel="noopener">
+          <img src="assets/humanoid-run-data.png" alt="Humanoid joint tracking and runtime data plots" loading="lazy">
+        </a>
+      </div>
+    </section>
+
+    <section id="fleet" class="project project-alt">
+      <div class="section-shell">
+        <header class="project-header">
+          <div>
+            <p class="eyebrow">Selected Project 02 · Oct 2025 – Feb 2026</p>
+            <h2>Multi-Humanoid Dance & Fleet Control</h2>
+            <p class="project-subtitle">Motion training and centralized orchestration for eight Unitree G1 robots</p>
+          </div>
+          <div class="role-card">
+            <span class="role-label">My role</span>
+            <p>Sole developer of the fleet-control system in an approximately 10-person team; also contributed to motion training and on-site deployment.</p>
+          </div>
+        </header>
+
+        <div class="project-intro fleet-intro">
+          <figure class="wide-figure">
+            <img src="assets/g1-stage-performance.jpg" alt="Eight Unitree G1 humanoid robots performing on stage" loading="lazy">
+          </figure>
+          <div class="project-details">
+            <p class="lead-copy">
+              I designed and implemented a UDP-based control console for fleet-level, group-level,
+              and individual robot control. The system coordinated stage movement, synchronized dance triggering,
+              policy switching, and health monitoring during a live performance.
+            </p>
+            <ul class="key-points">
+              <li><strong>Motion:</strong> Dance motion retargeting and policy training using GMR and BeyondMimic.</li>
+              <li><strong>Control:</strong> Group, subgroup, and individual targeting through a PySide6 operator interface.</li>
+              <li><strong>Synchronization:</strong> Absolute timestamps and repeated UDP transmission for reliable coordinated starts.</li>
+              <li><strong>Monitoring:</strong> Per-robot ACK state, ping latency, timeouts, and timestamped logs.</li>
+              <li><strong>Outcome:</strong> Live stage deployment with eight Unitree G1 humanoid robots.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <h3>Tests and live performance</h3>
+          <p>Laboratory validation followed by the complete on-stage performance.</p>
+        </div>
+        <div class="media-grid three">
+          <article class="media-card">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/g1-dance-test.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+            <div class="media-caption"><strong>Group dance test</strong><span>Coordinated motion in the laboratory.</span></div>
+          </article>
+          <article class="media-card">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/g1-dance-test-2.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+            <div class="media-caption"><strong>Policy synchronization test</strong><span>Multi-robot timing and motion validation.</span></div>
+          </article>
+          <article class="media-card featured-video">
+            <video controls preload="metadata" playsinline poster="assets/g1-stage-performance.jpg">
+              <source src="assets/g1-live-performance.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+            <div class="media-caption"><strong>Live stage performance</strong><span>Complete performance involving eight G1 robots.</span></div>
+          </article>
+        </div>
+
+        <div class="visual-pair">
+          <article>
+            <div class="section-heading"><h3>Operator interface</h3><p>Robot selection, mode control, ACK monitoring, and event logs.</p></div>
+            <a class="image-frame" href="assets/fleet-control-gui.jpg" target="_blank" rel="noopener">
+              <img src="assets/fleet-control-gui.jpg" alt="PySide6 multi-robot fleet control interface" loading="lazy">
+            </a>
+          </article>
+          <article>
+            <div class="section-heading"><h3>Control architecture</h3><p>Command scheduling, synchronization, UDP routing, and feedback.</p></div>
+            <a class="image-frame" href="assets/g1-fleet-architecture.png" target="_blank" rel="noopener">
+              <img src="assets/g1-fleet-architecture.png" alt="Architecture diagram of the multi-robot fleet control system" loading="lazy">
+            </a>
+          </article>
+        </div>
+
+        <div class="photo-strip">
+          <img src="assets/g1-stage-performance.jpg" alt="Unitree G1 robots performing at a live event" loading="lazy">
+          <img src="assets/g1-team-photo.jpg" alt="Project team after the multi-robot performance" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-shell">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Research collaboration and visiting opportunities</h2>
+        <p>I am interested in humanoid robot learning, loco-manipulation, reinforcement and imitation learning, and sim-to-real deployment.</p>
+      </div>
+      <div class="contact-links">
+        <a class="button primary" href="mailto:sliozhou04@gmail.com">sliozhou04@gmail.com</a>
+        <a class="button secondary" href="https://github.com/jijiji999" target="_blank" rel="noopener">GitHub profile</a>
+        <a class="button secondary" href="Ji_Zhou_CV.pdf" target="_blank" rel="noopener">Curriculum Vitae</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="section-shell footer-inner">
+      <span>Ji Zhou · Robotics Projects</span>
+      <span>Chongqing, China</span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
