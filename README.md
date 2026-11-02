@@ -6,7 +6,7 @@ Static project-media website prepared for GitHub Pages.
 
 - Full-size humanoid: simulation, control validation, whole-body walking, and lower-body validation.
 - Eight-robot G1 fleet: laboratory tests, live performance, and control architecture.
-- Two-wheeled legged robot: graduation project covering design, fabrication, LQR control, height adjustment, jumping, leg motion, and simulation.
+- Biped Wheeled Legged: graduation project covering design, fabrication, LQR control, height adjustment, jumping, leg motion, and simulation.
 - Sorting robot: 2023 competition project, with competition and laboratory recordings and hardware photos.
 - Everyday research: stage-step and robot teleoperation demonstrations.
 
