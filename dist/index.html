@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ji Zhou's robotics project media: humanoid reinforcement learning, sim-to-real deployment, and multi-robot fleet control.">
+  <meta name="description" content="Ji Zhou's robotics projects: humanoid learning and deployment, multi-robot fleet control, an LQR-controlled two-wheeled legged robot, a sorting robot, and everyday research demonstrations.">
   <meta name="theme-color" content="#0b1930">
   <title>Ji Zhou | Robotics Projects</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -21,6 +21,9 @@
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
         <a href="#humanoid">Humanoid Robot</a>
         <a href="#fleet">Multi-Robot System</a>
+        <a href="#biped">Wheeled-Legged Robot</a>
+        <a href="#sorting">Sorting Robot</a>
+        <a href="#daily">Research Demos</a>
         <a href="#contact">Contact</a>
         <a class="nav-cv" href="Ji_Zhou_CV.pdf" target="_blank" rel="noopener">CV</a>
       </nav>
@@ -35,7 +38,8 @@
         <p class="hero-lead">
           I am a master's student working on reinforcement-learning-based humanoid locomotion,
           sim-to-real deployment, imitation learning, and multi-robot coordination.
-          This page presents selected project videos, system diagrams, and implementation details.
+          My projects also span mechanical design, LQR control, and embedded robotics.
+          This page presents selected project videos, system diagrams, and everyday research demonstrations.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#humanoid">View selected work</a>
@@ -67,6 +71,18 @@
       <a href="#fleet">
         <span class="project-number">02</span>
         <span><strong>Eight-Robot G1 Fleet</strong><small>Dance training and centralized control</small></span>
+      </a>
+      <a href="#biped">
+        <span class="project-number">03</span>
+        <span><strong>Two-Wheeled Legged Robot</strong><small>Graduation project · Design, fabrication, and LQR control</small></span>
+      </a>
+      <a href="#sorting">
+        <span class="project-number">04</span>
+        <span><strong>Sorting Robot</strong><small>Competition project · Mechanical and embedded development</small></span>
+      </a>
+      <a href="#daily">
+        <span class="project-number">05</span>
+        <span><strong>Everyday Research</strong><small>Laboratory demonstrations and experiments</small></span>
       </a>
     </section>
 
@@ -112,7 +128,7 @@
         <h3>Training and real-robot results</h3>
         <p>Representative simulation and deployment recordings.</p>
       </div>
-      <div class="media-grid three">
+      <div class="media-grid two">
         <article class="media-card">
           <video controls preload="metadata" playsinline>
             <source src="assets/wholebody-simulation.webm" type="video/webm">
@@ -125,7 +141,14 @@
             <source src="assets/wholebody-walk.mp4" type="video/mp4">
             Your browser does not support embedded video.
           </video>
-          <div class="media-caption"><strong>Full-body walking</strong><span>Real-robot policy deployment and integration.</span></div>
+          <div class="media-caption"><strong>Whole-body control validation</strong><span>Earlier real-robot deployment and integration recording.</span></div>
+        </article>
+        <article class="media-card">
+          <video controls preload="none" playsinline poster="assets/wholebody-real-walking-poster.jpg">
+            <source src="assets/wholebody-real-walking.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <div class="media-caption"><strong>Whole-body walking</strong><span>Additional real-robot walking demonstration.</span></div>
         </article>
         <article class="media-card">
           <video controls preload="metadata" playsinline>
@@ -236,6 +259,140 @@
           <img src="assets/g1-stage-performance.jpg" alt="Unitree G1 robots performing at a live event" loading="lazy">
           <img src="assets/g1-team-photo.jpg" alt="Project team after the multi-robot performance" loading="lazy">
         </div>
+      </div>
+    </section>
+
+    <section id="biped" class="project section-shell">
+      <header class="project-header">
+        <div>
+          <p class="eyebrow">Selected Project 03 · Graduation Project</p>
+          <h2>Two-Wheeled Legged Robot</h2>
+          <p class="project-subtitle">Mechanical design, fabrication, and linear quadratic regulator (LQR) control</p>
+        </div>
+        <div class="role-card">
+          <span class="role-label">My role</span>
+          <p>Designed and fabricated the robot and implemented LQR-based control to achieve locomotion, body-height adjustment, and jumping.</p>
+        </div>
+      </header>
+      <div class="project-intro fleet-intro">
+        <figure class="wide-figure hardware-figure">
+          <img src="assets/biped-height-adjustment-poster.jpg" alt="Self-designed two-wheeled legged robot with articulated legs" loading="lazy">
+          <figcaption>Physical prototype from my graduation project.</figcaption>
+        </figure>
+        <div class="project-details">
+          <p class="lead-copy">For my graduation project, I designed and built a two-wheeled legged robot and developed an LQR-based controller. The physical prototype demonstrated movement, variable body height, and jumping.</p>
+          <ul class="key-points">
+            <li><strong>Hardware:</strong> Robot design, fabrication, and assembly.</li>
+            <li><strong>Control:</strong> LQR-based control of the wheeled-legged platform.</li>
+            <li><strong>Validation:</strong> Simulation alongside physical motion experiments.</li>
+            <li><strong>Results:</strong> Locomotion, body-height adjustment, jumping, and leg-motion demonstrations.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-heading"><h3>Prototype in motion</h3><p>Physical demonstrations of the robot's motion capabilities.</p></div>
+      <div class="media-grid two">
+        <article class="media-card">
+          <video controls preload="none" playsinline poster="assets/biped-height-adjustment-poster.jpg"><source src="assets/biped-height-adjustment.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+          <div class="media-caption"><strong>Body-height adjustment</strong><span>Changing leg height on the physical robot.</span></div>
+        </article>
+        <article class="media-card">
+          <video controls preload="none" playsinline poster="assets/biped-jumping-poster.jpg"><source src="assets/biped-jumping.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+          <div class="media-caption"><strong>Jumping</strong><span>Jump demonstration with the fabricated prototype.</span></div>
+        </article>
+        <article class="media-card">
+          <video controls preload="none" playsinline poster="assets/biped-leg-motion-poster.jpg"><source src="assets/biped-leg-motion.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+          <div class="media-caption"><strong>Left and right leg motion</strong><span>Articulated-leg movement on the physical platform.</span></div>
+        </article>
+        <article class="media-card">
+          <video controls preload="none" playsinline poster="assets/biped-single-support-poster.jpg"><source src="assets/biped-single-support.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+          <div class="media-caption"><strong>Single-support circular motion</strong><span>Motion demonstration around a single support point.</span></div>
+        </article>
+      </div>
+      <div class="section-heading"><h3>Modeling and simulation</h3><p>Model, Simulink setup, and simulation recording.</p></div>
+      <div class="media-grid three modeling-grid">
+        <article class="media-card">
+          <a class="model-image" href="assets/biped-model.png" target="_blank" rel="noopener"><img src="assets/biped-model.png" alt="Simplified model of the two-wheeled legged robot" loading="lazy"></a>
+          <div class="media-caption"><strong>Robot model</strong><span>Simplified model used in the project.</span></div>
+        </article>
+        <article class="media-card">
+          <a class="model-image" href="assets/biped-simulink.png" target="_blank" rel="noopener"><img src="assets/biped-simulink.png" alt="Simulink block diagram for the wheeled-legged robot" loading="lazy"></a>
+          <div class="media-caption"><strong>Simulink setup</strong><span>Open the diagram to inspect the full model.</span></div>
+        </article>
+        <article class="media-card">
+          <video controls preload="none" playsinline poster="assets/biped-simulation-poster.jpg"><source src="assets/biped-simulation.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+          <div class="media-caption"><strong>Simulation recording</strong><span>Robot behavior in the simulation environment.</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="sorting" class="project project-alt">
+      <div class="section-shell">
+        <header class="project-header">
+          <div>
+            <p class="eyebrow">Selected Project 04 · 2023</p>
+            <h2>Sorting Robot</h2>
+            <p class="project-subtitle">China Robot Competition and RoboCup China Open · National Second Prize</p>
+          </div>
+          <div class="role-card">
+            <span class="role-label">My role · Team leader</span>
+            <p>Led mechanical design and fabrication and developed STM32F407-based embedded drive and control functions.</p>
+          </div>
+        </header>
+        <div class="project-intro fleet-intro">
+          <figure class="wide-figure hardware-figure">
+            <img src="assets/sorting-competition.jpg" alt="Mobile sorting robot with manipulator operating beside a table of colored balls at the competition" loading="lazy">
+            <figcaption>The sorting robot in the competition arena.</figcaption>
+          </figure>
+          <div class="project-details">
+            <p class="lead-copy">This competition project combined a mobile base, manipulator, and storage mechanism for object sorting. As team leader, I worked across mechanical fabrication, component selection, and embedded development.</p>
+            <ul class="key-points">
+              <li><strong>Mechanics:</strong> Robot body, manipulator, mobile base, and storage mechanism.</li>
+              <li><strong>Hardware:</strong> Motor and sensor selection and integration.</li>
+              <li><strong>Embedded control:</strong> STM32F407 drive, vision interface, control logic, and serial/I2C communication.</li>
+              <li><strong>Tools:</strong> SolidWorks for mechanical design and Keil for embedded development.</li>
+              <li><strong>Outcome:</strong> National Second Prize in 2023.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="section-heading"><h3>Competition and laboratory recordings</h3><p>Sorting operation in the arena and during development.</p></div>
+        <div class="media-grid two">
+          <article class="media-card">
+            <video controls preload="none" playsinline poster="assets/sorting-competition-poster.jpg"><source src="assets/sorting-competition.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+            <div class="media-caption"><strong>Competition run</strong><span>The robot operating in the competition arena.</span></div>
+          </article>
+          <article class="media-card">
+            <video controls preload="none" playsinline poster="assets/sorting-lab-test-poster.jpg"><source src="assets/sorting-lab-test.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+            <div class="media-caption"><strong>Sorting test</strong><span>Manipulator and object-handling tests in the laboratory.</span></div>
+          </article>
+        </div>
+        <div class="photo-strip hardware-photos">
+          <a href="assets/sorting-competition.jpg" target="_blank" rel="noopener"><img src="assets/sorting-competition.jpg" alt="Sorting robot at the competition" loading="lazy"></a>
+          <a href="assets/sorting-robot.jpg" target="_blank" rel="noopener"><img src="assets/sorting-robot.jpg" alt="Completed sorting robot showing its mobile base and manipulator" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="daily" class="project section-shell">
+      <header class="project-header">
+        <div>
+          <p class="eyebrow">Research Showcase 05 · Everyday Research</p>
+          <h2>Life in the Robotics Lab</h2>
+          <p class="project-subtitle">Short recordings from daily robotics research and demonstrations</p>
+        </div>
+        <div class="role-card">
+          <span class="role-label">Research snapshots</span>
+          <p>A collection of everyday laboratory demonstrations, complementing the selected engineering projects above.</p>
+        </div>
+      </header>
+      <div class="media-grid two">
+        <article class="media-card">
+          <video controls preload="none" playsinline poster="assets/daily-stage-step-poster.jpg"><source src="assets/daily-stage-step.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+          <div class="media-caption"><strong>Stage-step demonstration</strong><span>A short laboratory recording of a humanoid stepping onto a platform.</span></div>
+        </article>
+        <article class="media-card">
+          <video controls preload="none" playsinline poster="assets/daily-teleoperation-poster.jpg"><source src="assets/daily-teleoperation.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+          <div class="media-caption"><strong>Robot teleoperation demonstration</strong><span>A snapshot of everyday humanoid robot experimentation.</span></div>
+        </article>
       </div>
     </section>
 

@@ -2,6 +2,16 @@
 
 Static project-media website prepared for GitHub Pages.
 
+## Project sections
+
+- Full-size humanoid: simulation, control validation, whole-body walking, and lower-body validation.
+- Eight-robot G1 fleet: laboratory tests, live performance, and control architecture.
+- Two-wheeled legged robot: graduation project covering design, fabrication, LQR control, height adjustment, jumping, leg motion, and simulation.
+- Sorting robot: 2023 competition project, with competition and laboratory recordings and hardware photos.
+- Everyday research: stage-step and robot teleoperation demonstrations.
+
+Media are served from `dist/assets/` using descriptive ASCII filenames. Newly added videos use H.264/AAC MP4 with fast-start metadata and individual poster images; the original files remain in the sibling `video/` folder.
+
 ## Publish
 
 1. Create a public GitHub repository, for example `robotics-projects`.
