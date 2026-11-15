@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Ji Zhou's robotics projects: humanoid learning and deployment, multi-robot fleet control, an LQR-controlled biped wheeled legged robot, a sorting robot, and everyday research demonstrations.">
-  <meta name="theme-color" content="#0b1930">
+  <meta name="theme-color" content="#f7f8f5">
   <title>Ji Zhou | Robotics Projects</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261102-model-fit">
+  <link rel="stylesheet" href="styles.css?v=20261115-portfolio">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -34,7 +34,8 @@
     <section id="top" class="hero section-shell">
       <div class="hero-copy">
         <p class="eyebrow">Robotics Engineering · Chongqing University</p>
-        <h1>Humanoid robot learning,<br>deployment, and fleet control.</h1>
+        <p class="hero-name">Ji Zhou / Selected work</p>
+        <h1>Humanoid robot learning,<br><span>deployment, and fleet control.</span></h1>
         <p class="hero-lead">
           I am a master's student working on reinforcement-learning-based humanoid locomotion,
           sim-to-real deployment, imitation learning, and multi-robot coordination.
@@ -47,40 +48,36 @@
           <a class="text-link" href="https://github.com/jijiji999" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
-      <aside class="hero-summary" aria-label="Project highlights">
-        <div class="summary-item">
-          <span class="summary-value">50 Hz</span>
-          <span class="summary-label">ONNX policy deployment</span>
-        </div>
-        <div class="summary-item">
-          <span class="summary-value">8 robots</span>
-          <span class="summary-label">Live Unitree G1 fleet</span>
-        </div>
-        <div class="summary-item">
-          <span class="summary-value">End-to-end</span>
-          <span class="summary-label">Training to real-robot control</span>
-        </div>
-      </aside>
+      <figure class="hero-visual">
+        <img src="assets/full-size-humanoid.jpg" alt="Full-size humanoid robot in the laboratory" fetchpriority="high" width="1080" height="1920">
+        <figcaption><span class="visual-label">From simulation to the physical world</span><strong>Learning. Control. Motion.</strong><a href="#humanoid" aria-label="Explore the full-size humanoid project">Explore project ↗</a></figcaption>
+      </figure>
     </section>
 
+    <div class="work-heading section-shell"><div><p class="eyebrow">The portfolio</p><h2>Selected projects & research</h2></div><p>From mechanical design to learning and deployment.</p></div>
     <section class="project-nav section-shell" aria-label="Selected project navigation">
       <a href="#humanoid">
+        <img src="assets/full-size-humanoid.jpg" alt="" loading="lazy" width="1080" height="1920">
         <span class="project-number">01</span>
         <span><strong>Full-Size Humanoid Robot</strong><small>RL training and sim-to-real deployment</small></span>
       </a>
       <a href="#fleet">
+        <img src="assets/g1-stage-performance.jpg" alt="" loading="lazy" width="1280" height="854">
         <span class="project-number">02</span>
         <span><strong>Eight-Robot G1 Fleet</strong><small>Dance training and centralized control</small></span>
       </a>
       <a href="#biped">
+        <img src="assets/biped-height-adjustment-poster.jpg" alt="" loading="lazy" width="1280" height="720">
         <span class="project-number">03</span>
         <span><strong>Biped Wheeled Legged</strong><small>Graduation project · Design, fabrication, and LQR control</small></span>
       </a>
       <a href="#sorting">
+        <img src="assets/sorting-competition.jpg" alt="" loading="lazy" width="1920" height="1280">
         <span class="project-number">04</span>
         <span><strong>Sorting Robot</strong><small>Competition project · Mechanical and embedded development</small></span>
       </a>
       <a href="#daily">
+        <img src="assets/daily-stage-step-poster.jpg" alt="" loading="lazy" width="1280" height="720">
         <span class="project-number">05</span>
         <span><strong>Everyday Research</strong><small>Laboratory demonstrations and experiments</small></span>
       </a>
@@ -101,7 +98,7 @@
 
       <div class="project-intro">
         <figure class="portrait-figure">
-          <img src="assets/full-size-humanoid.jpg" alt="Full-size self-developed humanoid robot suspended in the laboratory" loading="lazy">
+          <img src="assets/full-size-humanoid.jpg" alt="Full-size self-developed humanoid robot suspended in the laboratory" loading="lazy" width="1080" height="1920">
         </figure>
         <div class="project-details">
           <p class="lead-copy">
@@ -164,7 +161,7 @@
         <a class="text-link" href="assets/humanoid-system-architecture.svg" target="_blank" rel="noopener">Open vector diagram ↗</a>
       </div>
       <a class="diagram-frame tall" href="assets/humanoid-system-architecture.svg" target="_blank" rel="noopener" aria-label="Open the humanoid closed-loop architecture diagram">
-        <img src="assets/humanoid-system-architecture.png" alt="Closed-loop architecture of the self-developed humanoid robot system" loading="lazy">
+        <img src="assets/humanoid-system-architecture.png" alt="Closed-loop architecture of the self-developed humanoid robot system" loading="lazy" width="2600" height="1400">
       </a>
       <div class="data-panel">
         <div>
@@ -173,7 +170,7 @@
           <p>Recorded joint trajectories and control signals were used to compare expected and physical behavior during deployment and debugging.</p>
         </div>
         <a href="assets/humanoid-run-data.png" target="_blank" rel="noopener">
-          <img src="assets/humanoid-run-data.png" alt="Humanoid joint tracking and runtime data plots" loading="lazy">
+          <img src="assets/humanoid-run-data.png" alt="Humanoid joint tracking and runtime data plots" loading="lazy" width="3840" height="2076">
         </a>
       </div>
     </section>
@@ -194,7 +191,7 @@
 
         <div class="project-intro fleet-intro">
           <figure class="wide-figure">
-            <img src="assets/g1-stage-performance.jpg" alt="Eight Unitree G1 humanoid robots performing on stage" loading="lazy">
+            <img src="assets/g1-stage-performance.jpg" alt="Eight Unitree G1 humanoid robots performing on stage" loading="lazy" width="1280" height="854">
           </figure>
           <div class="project-details">
             <p class="lead-copy">
@@ -244,20 +241,20 @@
           <article>
             <div class="section-heading"><h3>Operator interface</h3><p>Robot selection, mode control, ACK monitoring, and event logs.</p></div>
             <a class="image-frame" href="assets/fleet-control-gui.jpg" target="_blank" rel="noopener">
-              <img src="assets/fleet-control-gui.jpg" alt="PySide6 multi-robot fleet control interface" loading="lazy">
+              <img src="assets/fleet-control-gui.jpg" alt="PySide6 multi-robot fleet control interface" loading="lazy" width="1121" height="955">
             </a>
           </article>
           <article>
             <div class="section-heading"><h3>Control architecture</h3><p>Command scheduling, synchronization, UDP routing, and feedback.</p></div>
             <a class="image-frame" href="assets/g1-fleet-architecture.png" target="_blank" rel="noopener">
-              <img src="assets/g1-fleet-architecture.png" alt="Architecture diagram of the multi-robot fleet control system" loading="lazy">
+              <img src="assets/g1-fleet-architecture.png" alt="Architecture diagram of the multi-robot fleet control system" loading="lazy" width="2400" height="1350">
             </a>
           </article>
         </div>
 
         <div class="photo-strip">
-          <img src="assets/g1-stage-performance.jpg" alt="Unitree G1 robots performing at a live event" loading="lazy">
-          <img src="assets/g1-team-photo.jpg" alt="Project team after the multi-robot performance" loading="lazy">
+          <img src="assets/g1-stage-performance.jpg" alt="Unitree G1 robots performing at a live event" loading="lazy" width="1280" height="854">
+          <img src="assets/g1-team-photo.jpg" alt="Project team after the multi-robot performance" loading="lazy" width="1706" height="1280">
         </div>
       </div>
     </section>
@@ -276,7 +273,7 @@
       </header>
       <div class="project-intro fleet-intro">
         <figure class="wide-figure hardware-figure">
-          <img src="assets/biped-height-adjustment-poster.jpg" alt="Self-designed biped wheeled legged robot with articulated legs" loading="lazy">
+          <img src="assets/biped-height-adjustment-poster.jpg" alt="Self-designed biped wheeled legged robot with articulated legs" loading="lazy" width="1280" height="720">
           <figcaption>Physical prototype from my graduation project.</figcaption>
         </figure>
         <div class="project-details">
@@ -311,11 +308,11 @@
       <div class="section-heading"><h3>Modeling and simulation</h3><p>Model, Simulink setup, and simulation recording.</p></div>
       <div class="media-grid three modeling-grid">
         <article class="media-card">
-          <a class="model-image" href="assets/biped-model.png" target="_blank" rel="noopener"><img src="assets/biped-model.png" alt="Simplified model of the biped wheeled legged robot" loading="lazy"></a>
+          <a class="model-image" href="assets/biped-model.png" target="_blank" rel="noopener"><img src="assets/biped-model.png" alt="Simplified model of the biped wheeled legged robot" loading="lazy" width="712" height="1052"></a>
           <div class="media-caption"><strong>Robot model</strong><span>Simplified model used in the project.</span></div>
         </article>
         <article class="media-card">
-          <a class="model-image" href="assets/biped-simulink.png" target="_blank" rel="noopener"><img src="assets/biped-simulink.png" alt="Simulink block diagram for the biped wheeled legged robot" loading="lazy"></a>
+          <a class="model-image" href="assets/biped-simulink.png" target="_blank" rel="noopener"><img src="assets/biped-simulink.png" alt="Simulink block diagram for the biped wheeled legged robot" loading="lazy" width="1840" height="781"></a>
           <div class="media-caption"><strong>Simulink setup</strong><span>Open the diagram to inspect the full model.</span></div>
         </article>
         <article class="media-card">
@@ -340,7 +337,7 @@
         </header>
         <div class="project-intro fleet-intro">
           <figure class="wide-figure hardware-figure">
-            <img src="assets/sorting-competition.jpg" alt="Mobile sorting robot with manipulator operating beside a table of colored balls at the competition" loading="lazy">
+            <img src="assets/sorting-competition.jpg" alt="Mobile sorting robot with manipulator operating beside a table of colored balls at the competition" loading="lazy" width="1920" height="1280">
             <figcaption>The sorting robot in the competition arena.</figcaption>
           </figure>
           <div class="project-details">
@@ -366,8 +363,8 @@
           </article>
         </div>
         <div class="photo-strip hardware-photos">
-          <a href="assets/sorting-competition.jpg" target="_blank" rel="noopener"><img src="assets/sorting-competition.jpg" alt="Sorting robot at the competition" loading="lazy"></a>
-          <a href="assets/sorting-robot.jpg" target="_blank" rel="noopener"><img src="assets/sorting-robot.jpg" alt="Completed sorting robot showing its mobile base and manipulator" loading="lazy"></a>
+          <a href="assets/sorting-competition.jpg" target="_blank" rel="noopener"><img src="assets/sorting-competition.jpg" alt="Sorting robot at the competition" loading="lazy" width="1920" height="1280"></a>
+          <a href="assets/sorting-robot.jpg" target="_blank" rel="noopener"><img src="assets/sorting-robot.jpg" alt="Completed sorting robot showing its mobile base and manipulator" loading="lazy" width="1706" height="1280"></a>
         </div>
       </div>
     </section>
