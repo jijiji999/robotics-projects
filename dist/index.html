@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f7f8f5">
   <title>Ji Zhou | Robotics Projects</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261115-image-ratio">
+  <link rel="stylesheet" href="styles.css?v=20261115-language">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -17,7 +17,6 @@
         <span class="brand-mark">JZ</span>
         <span>Ji Zhou</span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
         <a href="#humanoid">Humanoid Robot</a>
         <a href="#fleet">Multi-Robot System</a>
@@ -27,6 +26,16 @@
         <a href="#contact">Contact</a>
         <a class="nav-cv" href="Ji_Zhou_CV.pdf?v=942d321e" target="_blank" rel="noopener">CV</a>
       </nav>
+      <div class="header-actions">
+        <label class="language-control" data-language-control>
+          <span class="sr-only">Language</span>
+          <select id="language-select" aria-label="Language">
+            <option value="en" lang="en">English</option>
+            <option value="zh" lang="zh-CN">中文</option>
+          </select>
+        </label>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
     </div>
   </header>
 
@@ -413,6 +422,7 @@
       <span>Chongqing, China</span>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="translations.js?v=20261115-language"></script>
+  <script src="script.js?v=20261115-language"></script>
 </body>
 </html>
