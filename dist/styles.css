@@ -24,6 +24,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 img, video { display: block; max-width: 100%; }
+img { height: auto; }
 a { color: inherit; }
 .skip-link { position: absolute; left: -999px; top: 0; }
 .skip-link:focus { left: 12px; top: 12px; z-index: 100; background: #fff; padding: 10px 14px; border-radius: 8px; }
@@ -107,7 +108,7 @@ h3 { margin-bottom: 7px; font-size: clamp(1.3rem, 2vw, 1.7rem); }
 .data-panel { margin-top: 38px; padding: 28px; display: grid; grid-template-columns: .7fr 1.3fr; gap: 30px; align-items: center; border: 1px solid var(--line); border-radius: var(--radius); background: var(--wash); }
 .data-panel p:last-child { color: var(--muted); }
 .data-panel a { overflow: hidden; border-radius: 10px; border: 1px solid var(--line); }
-.data-panel img { width: 100%; }
+.data-panel img { width: 100%; height: auto; }
 .visual-pair { display: grid; grid-template-columns: .82fr 1.18fr; gap: 26px; }
 .visual-pair .section-heading { margin-top: 70px; min-height: 92px; }
 .image-frame { height: 370px; display: grid; place-items: center; }
